@@ -1,0 +1,65 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Agdasima&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: 'Agdasima', sans-serif;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #ecf; 
+}
+
+input{
+    grid-column: span 4;
+    text-align: end;
+    height: 3rem;
+    box-shadow: inset 3rem 3rem 1rem #d6cccc,
+    3rem 3rem 1rem rgba(0,0,0,0.16);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+}
+
+.calci{
+    background-color: whitesmoke;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow:  0.5rem 0.5rem 0.5rem #d6cccc,
+    0.5rem 0.5rem 0.5rem rgba(0,0,0,0.16);
+    display: grid;
+    grid-template-columns: repeat(4, 2rem);
+}
+
+button{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 40%;
+    font-size: 1rem;
+}
+
+.equals{
+    width: 4rem;
+    border-radius: 3.4rem;
+    background-color: yellow;
+}
+
+.operator{
+    background-color: palevioletred;
+}
+
+.number{
+    background-color: rgb(64, 173, 246);
+}
+
+ 
