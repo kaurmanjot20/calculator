@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calci">
+            <input type="text" placeholder="0" id="output-screen">
+            
+            <button onclick="Clear()" class="operator">AC</button>
+            <button onclick="del()" class="operator">CE</button>
+            <button onclick="percent()" class="operator">%</button>
+            <button onclick="display('x')" class="operator">x</button>
+            <button onclick="display('7')" class="number">7</button>
+            <button onclick="display('8')" class="number">8</button>
+            <button onclick="display('9')" class="number">9</button>
+            <button onclick="display('/')" class="operator">/</button>
+            <button onclick="display('4')" class="number">4</button>
+            <button onclick="display('5')" class="number">5</button>
+            <button onclick="display('6')" class="number">6</button>
+            <button onclick="display('-')" class="operator">-</button>
+            <button onclick="display('1')" class="number">1</button>
+            <button onclick="display('2')" class="number">2</button>
+            <button onclick="display('3')" class="number">3</button>
+            <button onclick="display('+')" class="operator">+</button>
+            
+            <button onclick="display('0')" class="number">0</button>
+            <button onclick="display('.')" class="number">.</button>
+            <button onclick="Calculate()" class="equals">=</button>
+        </div>
+    </div>
+
+    <script>
+        let outputScreen = document.getElementById("output-screen");
+
+        function display(num){
+            outputScreen.value += num
+        }
+
+        function Calculate(){
+            try{
+                outputScreen.value = eval(outputScreen.value);
+            }
+            catch(err){
+                alert("Invalid operation");
+            }
+        }
+
+        function percent(){
+            outputScreen.value = eval(outputScreen.value*100);
+        }
+
+        function Clear(){
+            outputScreen.value = "";
+        }
+
+        function del(){
+            outputScreen.value = outputScreen.value.slice(0,-1);
+        }
+    </script>
+</body>
+</html>
